@@ -2,7 +2,13 @@
 
 A small static widget for GitHub Pages: Hong Kong time, date, and today’s **7-day cycle** from the 2026–2027 school calendar (draft 10/08/2026). The page has no full-screen background—only the card.
 
-Cycle days use the coloured Day 1–7 sequence on the calendar. Days that are **not** a coloured teaching day — including summer holiday **26/08/2026** — show **Holiday**.
+Cycle days use the coloured Day 1–7 sequence on the calendar.
+
+| Badge | Example |
+|---|---|
+| Day 1–7 | Coloured cycle teaching day (7/9 is Day 1) |
+| **Special Day** | Opening, half-days, assessment, picnic, parents’ day, sports day, OLE week, PD, post-exam. **1/9/2026** is Special Day (開學日), not Holiday |
+| **Holiday** | Public/school holidays, weekends, summer. **26/08/2026** is Holiday |
 
 ## Open locally
 

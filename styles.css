@@ -152,6 +152,11 @@ html, body {
   color: #5c5348;
 }
 
+.badge.special {
+  background: #d9e8ff;
+  color: #1a3a66;
+}
+
 .badge.d1 { background: color-mix(in srgb, var(--d1) 45%, white); }
 .badge.d2 { background: color-mix(in srgb, var(--d2) 45%, white); }
 .badge.d3 { background: color-mix(in srgb, var(--d3) 55%, white); }
