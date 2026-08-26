@@ -139,9 +139,9 @@ function renderDate(d) {
   const mon = d.getMonth();
   const day = d.getDate();
   document.getElementById("dateLine").textContent =
-    `${y}年${mon + 1}月${day}日 (${MONTH_EN[mon]} ${day})`;
+    `${mon + 1}月${day}日`;
   document.getElementById("weekdayLine").textContent =
-    `${WEEKDAY_ZH[d.getDay()]} (${WEEKDAY_EN[d.getDay()]})`;
+    `${WEEKDAY_ZH[d.getDay()]}`;
 }
 
 function renderCycle(d) {
@@ -153,33 +153,31 @@ function renderCycle(d) {
   const sub = document.getElementById("cycleSub");
 
   if (hit) {
-    line.innerHTML = `循環日：<span class="badge d${hit.day}">${DAY_ZH[hit.day]} (Day ${hit.day})</span>`;
-    sub.textContent = `第 ${hit.cycle} 循環 · Cycle ${hit.cycle}`;
+    line.innerHTML = `<span class="badge d${hit.day}">Day ${hit.day}</span>`;
+    sub.textContent = `第${hit.cycle}循環`;
     return;
   }
 
   if (special) {
-    line.innerHTML = `循環日：<span class="badge special">Special Day</span>`;
-    sub.textContent = special;
+    line.innerHTML = `<span class="badge special">Special Day</span>`;
+    sub.textContent = special.split(" · ")[0];
     return;
   }
 
   if (holiday) {
-    line.innerHTML = `循環日：<span class="badge holiday">Holiday</span>`;
-    sub.textContent = holiday;
+    line.innerHTML = `<span class="badge holiday">Holiday</span>`;
+    sub.textContent = holiday.split(" · ")[0];
     return;
   }
 
   if (inSummerHoliday(key) || d.getDay() === 0 || d.getDay() === 6) {
-    line.innerHTML = `循環日：<span class="badge holiday">Holiday</span>`;
-    sub.textContent = inSummerHoliday(key)
-      ? "暑假 · Summer holiday"
-      : "週末 · Weekend";
+    line.innerHTML = `<span class="badge holiday">Holiday</span>`;
+    sub.textContent = inSummerHoliday(key) ? "暑假" : "週末";
     return;
   }
 
-  line.innerHTML = `循環日：<span class="badge holiday">Holiday</span>`;
-  sub.textContent = "假期／非循環日 · No cycle lesson today";
+  line.innerHTML = `<span class="badge holiday">Holiday</span>`;
+  sub.textContent = "非循環日";
 }
 
 function tick() {

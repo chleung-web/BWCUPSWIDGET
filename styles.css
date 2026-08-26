@@ -2,7 +2,7 @@
   --card: #ffffff;
   --ink: #1d2a22;
   --muted: #4d5c54;
-  --shadow: 0 18px 40px rgba(12, 28, 16, 0.28);
+  --shadow: 0 4px 10px rgba(12, 28, 16, 0.18);
   --d1: #f173ac;
   --d2: #fbb040;
   --d3: #ffdd00;
@@ -14,134 +14,148 @@
 
 * { box-sizing: border-box; }
 
-html, body {
+html, body, .widget {
+  width: 150px;
+  height: 150px;
   margin: 0;
-  min-height: 100%;
+  overflow: hidden;
+}
+
+html, body {
   font-family: "Segoe UI", "Microsoft JhengHei", "PingFang TC", sans-serif;
   color: var(--ink);
   background: transparent;
 }
 
 .widget {
-  width: min(360px, calc(100vw - 24px));
-  margin: 16px;
-  padding: 22px 22px 18px;
+  padding: 6px 7px 5px;
   background: var(--card);
-  border-radius: 28px;
+  border-radius: 16px;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .date-line {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 11px;
   font-weight: 700;
-  line-height: 1.35;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .weekday-line {
-  margin: 4px 0 12px;
-  font-size: 1.05rem;
+  margin: 1px 0 3px;
+  font-size: 9px;
   color: var(--muted);
+  line-height: 1.1;
 }
 
 .clock {
   display: grid;
   justify-items: center;
-  gap: 8px;
-  margin: 8px 0 14px;
+  gap: 0;
+  margin: 0;
 }
 
 .clock-face {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 42%, #fff 0 58%, #f3f1ea 59% 100%);
   box-shadow:
-    inset 0 0 0 10px #cfc6b0,
-    inset 0 0 0 14px #eee8dc,
-    0 8px 18px rgba(0,0,0,.18);
+    inset 0 0 0 4px #cfc6b0,
+    inset 0 0 0 6px #eee8dc,
+    0 2px 6px rgba(0,0,0,.14);
 }
 
 .num {
   position: absolute;
-  font-size: 0.78rem;
+  font-size: 7px;
   font-weight: 700;
   color: #5a5146;
   transform: translate(-50%, -50%);
 }
-.n12 { left: 50%; top: 14%; }
-.n1  { left: 68%; top: 19%; }
-.n2  { left: 81%; top: 32%; }
-.n3  { left: 86%; top: 50%; }
-.n4  { left: 81%; top: 68%; }
-.n5  { left: 68%; top: 81%; }
-.n6  { left: 50%; top: 86%; }
-.n7  { left: 32%; top: 81%; }
-.n8  { left: 19%; top: 68%; }
-.n9  { left: 14%; top: 50%; }
-.n10 { left: 19%; top: 32%; }
-.n11 { left: 32%; top: 19%; }
+.n12 { left: 50%; top: 12%; }
+.n1  { left: 70%; top: 18%; }
+.n2  { left: 82%; top: 32%; }
+.n3  { left: 88%; top: 50%; }
+.n4  { left: 82%; top: 68%; }
+.n5  { left: 70%; top: 82%; }
+.n6  { left: 50%; top: 88%; }
+.n7  { left: 30%; top: 82%; }
+.n8  { left: 18%; top: 68%; }
+.n9  { left: 12%; top: 50%; }
+.n10 { left: 18%; top: 32%; }
+.n11 { left: 30%; top: 18%; }
 
 .hand {
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform-origin: 50% 100%;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .hour {
-  width: 7px;
-  height: 52px;
-  margin-left: -3.5px;
+  width: 3px;
+  height: 18px;
+  margin-left: -1.5px;
   background: #2b241c;
 }
 .minute {
-  width: 5px;
-  height: 72px;
-  margin-left: -2.5px;
+  width: 2px;
+  height: 24px;
+  margin-left: -1px;
   background: #3b3228;
 }
 .second {
-  width: 2px;
-  height: 78px;
-  margin-left: -1px;
+  width: 1px;
+  height: 26px;
+  margin-left: -0.5px;
   background: #8a1f1f;
 }
 .cap {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 12px;
-  height: 12px;
-  margin: -6px 0 0 -6px;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
   border-radius: 50%;
   background: #2b241c;
 }
 
 .digital {
   font-variant-numeric: tabular-nums;
-  font-size: 0.95rem;
+  font-size: 8px;
   color: #6a6258;
+  line-height: 1.2;
+  margin-top: 1px;
 }
 
 .cycle-line {
-  margin: 10px 0 0;
-  font-size: 1.12rem;
+  margin: 3px 0 0;
+  font-size: 9px;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .cycle-sub {
-  margin: 4px 0 0;
-  min-height: 1.2em;
+  margin: 1px 0 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 8px;
+  line-height: 1.15;
+  max-height: 18px;
+  overflow: hidden;
 }
 
 .badge {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 0 5px;
   border-radius: 999px;
   color: #143028;
   background: #e7f3c8;
@@ -165,12 +179,4 @@ html, body {
 .badge.d6 { background: color-mix(in srgb, var(--d6) 40%, white); }
 .badge.d7 { background: color-mix(in srgb, var(--d7) 40%, white); }
 
-.weather {
-  margin: 12px 0 0;
-  padding-top: 10px;
-  border-top: 1px solid rgba(0,0,0,.08);
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-
+.weather { display: none; }
