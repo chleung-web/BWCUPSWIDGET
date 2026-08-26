@@ -15,8 +15,8 @@
 * { box-sizing: border-box; }
 
 html, body, .widget {
-  width: 330px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   margin: 0;
   overflow: hidden;
 }
@@ -28,9 +28,9 @@ html, body {
 }
 
 .widget {
-  padding: 12px 16px 10px;
+  padding: 10px 12px 8px;
   background: var(--card);
-  border-radius: 22px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
@@ -40,15 +40,15 @@ html, body {
 
 .date-line {
   margin: 0;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1.15;
   white-space: nowrap;
 }
 
 .weekday-line {
-  margin: 2px 0 6px;
-  font-size: 16px;
+  margin: 2px 0 4px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.1;
 }
@@ -62,20 +62,20 @@ html, body {
 
 .clock-face {
   position: relative;
-  width: 148px;
-  height: 148px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 42%, #fff 0 58%, #f3f1ea 59% 100%);
   box-shadow:
-    inset 0 0 0 8px #cfc6b0,
-    inset 0 0 0 12px #eee8dc,
-    0 4px 12px rgba(0,0,0,.14);
+    inset 0 0 0 7px #cfc6b0,
+    inset 0 0 0 11px #eee8dc,
+    0 4px 10px rgba(0,0,0,.14);
 }
 
 .num {
   position: absolute;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: #5a5146;
   transform: translate(-50%, -50%);
@@ -102,19 +102,19 @@ html, body {
 }
 .hour {
   width: 6px;
-  height: 38px;
+  height: 36px;
   margin-left: -3px;
   background: #2b241c;
 }
 .minute {
   width: 4px;
-  height: 50px;
+  height: 46px;
   margin-left: -2px;
   background: #3b3228;
 }
 .second {
   width: 2px;
-  height: 54px;
+  height: 50px;
   margin-left: -1px;
   background: #8a1f1f;
 }
@@ -122,24 +122,24 @@ html, body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 10px;
-  height: 10px;
-  margin: -5px 0 0 -5px;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
   border-radius: 50%;
   background: #2b241c;
 }
 
 .digital {
   font-variant-numeric: tabular-nums;
-  font-size: 16px;
+  font-size: 14px;
   color: #6a6258;
   line-height: 1.2;
   margin-top: 2px;
 }
 
 .cycle-line {
-  margin: 6px 0 0;
-  font-size: 16px;
+  margin: 5px 0 0;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -147,15 +147,15 @@ html, body {
 .cycle-sub {
   margin: 2px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.15;
-  max-height: 32px;
+  max-height: 28px;
   overflow: hidden;
 }
 
 .badge {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 2px 9px;
   border-radius: 999px;
   color: #143028;
   background: #e7f3c8;
