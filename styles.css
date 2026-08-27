@@ -15,8 +15,8 @@
 * { box-sizing: border-box; }
 
 html, body, .widget {
-  width: 150px;
-  height: 150px;
+  width: 220px;
+  height: 220px;
   margin: 0;
   overflow: hidden;
 }
@@ -28,9 +28,9 @@ html, body {
 }
 
 .widget {
-  padding: 6px 7px 5px;
+  padding: 10px 12px 9px;
   background: var(--card);
-  border-radius: 16px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
@@ -40,15 +40,15 @@ html, body {
 
 .date-line {
   margin: 0;
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 1.15;
   white-space: nowrap;
 }
 
 .weekday-line {
-  margin: 1px 0 3px;
-  font-size: 9px;
+  margin: 2px 0 4px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.1;
 }
@@ -65,7 +65,7 @@ html, body {
 .digital {
   margin: 0;
   font-variant-numeric: tabular-nums;
-  font-size: 22px;
+  font-size: 38px;
   font-weight: 700;
   letter-spacing: 0.5px;
   color: var(--ink);
@@ -74,24 +74,24 @@ html, body {
 }
 
 .cycle-line {
-  margin: 3px 0 0;
-  font-size: 9px;
+  margin: 4px 0 0;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.2;
 }
 
 .cycle-sub {
-  margin: 1px 0 0;
+  margin: 2px 0 0;
   color: var(--muted);
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.15;
-  max-height: 18px;
+  max-height: 28px;
   overflow: hidden;
 }
 
 .badge {
   display: inline-block;
-  padding: 0 5px;
+  padding: 1px 8px;
   border-radius: 999px;
   color: #143028;
   background: #e7f3c8;
