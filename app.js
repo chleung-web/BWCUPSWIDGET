@@ -121,17 +121,13 @@ function isoDate(d) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-function setHands(d) {
-  const h = d.getHours();
-  const m = d.getMinutes();
-  const s = d.getSeconds();
-  const hourDeg = ((h % 12) + m / 60) * 30;
-  const minDeg = (m + s / 60) * 6;
-  const secDeg = s * 6;
-  document.getElementById("hourHand").style.transform = `rotate(${hourDeg}deg)`;
-  document.getElementById("minuteHand").style.transform = `rotate(${minDeg}deg)`;
-  document.getElementById("secondHand").style.transform = `rotate(${secDeg}deg)`;
-  document.getElementById("digital").textContent = `${pad(h)}:${pad(m)}`;
+function setDigital(d) {
+  const h = pad(d.getHours());
+  const m = pad(d.getMinutes());
+  const s = pad(d.getSeconds());
+  const el = document.getElementById("digital");
+  el.textContent = `${h}:${m}:${s}`;
+  el.setAttribute("datetime", `${isoDate(d)}T${h}:${m}:${s}`);
 }
 
 function renderDate(d) {
@@ -182,7 +178,7 @@ function renderCycle(d) {
 
 function tick() {
   const live = hkNow();
-  setHands(live);
+  setDigital(live);
   const board = dateOverride ? new Date(`${dateOverride}T12:00:00`) : live;
   renderDate(board);
   renderCycle(board);

@@ -1,6 +1,6 @@
 # 佛教黃焯菴小學 · 循環日時鐘
 
-A **280 × 280 px** static widget for GitHub Pages (iframe size `280` × `280`): Hong Kong time, date, and today’s **7-day cycle**. No full-screen background—only the card.
+A **150 × 150 px** static widget for GitHub Pages (iframe size `150` × `150`): Hong Kong time as a **24-hour digital clock** (`HH:MM:SS`), date, and today’s **7-day cycle**. No full-screen background—only the card.
 
 Cycle days use the coloured Day 1–7 sequence on the calendar.
 
@@ -18,7 +18,7 @@ Open `index.html` in a browser, or from this folder:
 python -m http.server 8080
 ```
 
-Then visit `http://localhost:8080/?date=2026-08-26` (Holiday) or `?date=2026-09-01` (Special Day) or `?date=2026-09-07` (Day 1). Embed with `<iframe src="..." width="280" height="280">`.
+Then visit `http://localhost:8080/?date=2026-08-26` (Holiday) or `?date=2026-09-01` (Special Day) or `?date=2026-09-07` (Day 1). Embed with `<iframe src="..." width="150" height="150">`.
 
 ## GitHub Pages
 
