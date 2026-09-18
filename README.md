@@ -9,6 +9,7 @@ Cycle days use the coloured Day 1–7 sequence on the calendar.
 | Day 1–7 | Coloured cycle teaching day (7/9 is Day 1) |
 | **Special Day** | Opening, half-days, assessment, picnic, parents’ day, sports day, OLE week, PD, post-exam. **1/9/2026** is Special Day (開學日), not Holiday |
 | **Holiday** | Public/school holidays, weekends, summer. **26/08/2026** is Holiday |
+| **上課日** | Teaching day with no cycle colour (e.g. 18/9). Staff-only 內部事務 such as 例會 are not shown |
 
 ## Open locally
 
@@ -34,6 +35,8 @@ Then visit `http://localhost:8080/?date=2026-08-26` (Holiday) or `?date=2026-09-
 |---|---|
 | 第一日–第七日 (Day 1–7) | Coloured cycle teaching day |
 | Holiday | No cycle lesson: public holiday, school holiday, assessment day, PD day, weekend, or summer/winter break |
+
+The clock is **student-facing**. Calendar column **內部事務** (每月例會, 行政會議, SSPA paperwork, 聯校教師專業培訓) is not displayed. **教師專業發展日** is kept, because students have no lessons that day.
 
 The clock always uses **Asia/Hong_Kong** time. Optional weather is from Open-Meteo (no key); it stays hidden if the request fails.
 

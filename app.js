@@ -13,7 +13,6 @@ const SPECIAL_DAYS = {
   "2026-09-02": "半天上課 · Half-day school",
   "2026-09-03": "半天上課 · Half-day school",
   "2026-09-04": "半天上課／家長開學禮 · Half-day school",
-  "2026-09-18": "九月例會（學生仍上課） · Staff meeting",
   "2026-09-25": "中秋活動（半天上課） · Mid-Autumn activity",
   "2026-10-02": "教師專業發展日 · Teacher PD (no lessons)",
   "2026-11-12": "第一次校內評估 · Assessment",
@@ -109,6 +108,10 @@ function inSummerHoliday(iso) {
     (iso >= "2027-07-13" && iso <= "2027-08-31");
 }
 
+function isInternalStaffLabel(label) {
+  return /例會|行政會議|Staff meeting/i.test(label);
+}
+
 function hkNow() {
   return new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Hong_Kong" }));
 }
@@ -154,7 +157,7 @@ function renderCycle(d) {
     return;
   }
 
-  if (special) {
+  if (special && !isInternalStaffLabel(special)) {
     line.innerHTML = `<span class="badge special">Special Day</span>`;
     sub.textContent = special.split(" · ")[0];
     return;
@@ -172,8 +175,8 @@ function renderCycle(d) {
     return;
   }
 
-  line.innerHTML = `<span class="badge holiday">Holiday</span>`;
-  sub.textContent = "非循環日";
+  line.innerHTML = `<span class="badge">上課日</span>`;
+  sub.textContent = "";
 }
 
 function tick() {
