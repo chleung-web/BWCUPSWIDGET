@@ -9,7 +9,7 @@ Cycle days use the coloured Day 1–7 sequence on the calendar.
 | Day 1–7 | Coloured cycle teaching day (7/9 is Day 1) |
 | **Special Day** | Opening, half-days, assessment, picnic, parents’ day, sports day, OLE week, PD, post-exam. **1/9/2026** is Special Day (開學日), not Holiday |
 | **Holiday** | Public/school holidays, weekends, summer. **26/08/2026** is Holiday |
-| **上課日** | Teaching day with no cycle colour (e.g. 18/9). Staff-only 內部事務 such as 例會 are not shown |
+| **上課日** | Fallback only; teaching days in a cycle always show Day 1–7 |
 
 ## Open locally
 
@@ -46,5 +46,6 @@ Built from the school calendar colours:
 
 - Day 1 `#F173AC` … Day 7 `#9474B4`
 - First cycle: 7–15 Sep 2026 (Day 1 = 7/9, Day 7 = 15/9)
-- Last cycle: 22–23 Jun 2027 (Day 1–2 only)
-- Holidays do not use up a Day slot
+- Cycle 2 includes **18/9 as Day 3** (例會 does not skip a student cycle day)
+- Last cycle: 22–23 Jun 2027 (Day 1–2 only; 試後活動 starts 24/6)
+- Holidays, assessment days, and student-off special days do not use up a Day slot
